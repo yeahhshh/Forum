@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForumIAS Clone</title>
+    <link rel="stylesheet" href="18_12_3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ForumIAS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#forum">Forum</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search ForumIAS">
+                <button><i class="fas fa-search"></i></button>
+                <i class="fas fa-bell notification-bell"></i>
+                <button class="sign-in-btn">Sign In</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Welcome to ForumIAS</h2>
+                <p>Your one-stop solution for IAS preparation.</p>
+                <a href="#forum" class="btn">Join the Discussion</a>
+            </div>
+        </section>
+
+        <!-- Forum Section -->
+        <section id="forum" class="forum">
+            <div class="container">
+                <h2>Discussion Forum</h2>
+                <p>Join discussions with fellow aspirants.</p>
+                <div class="forum-posts">
+                    <article>
+                        <h3>Post Title 1</h3>
+                        <p>Post content goes here...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                    <article>
+                        <h3>Post Title 2</h3>
+                        <p>Post content goes here...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                    <article>
+                        <h3>Post Title 3</h3>
+                        <p>Post content goes here...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="resources">
+            <div class="container">
+                <h2>Resources</h2>
+                <p>Access study materials and guides.</p>
+                <ul>
+                    <li><a href="#">Study Material 1</a></li>
+                    <li><a href="#">Study Material 2</a></li>
+                    <li><a href="#">Study Material 3</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Learn more about our mission and vision.</p>
+                <p>ForumIAS is dedicated to providing the best resources and community support for IAS aspirants.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ForumIAS Clone. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="18_12_3.js"></script>
+
+    <script>S
+    // Function to store form data in local storage and clear inputs after submission
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the form from submitting
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Store the values in local storage
+        localStorage.setItem('name', name);
+        localStorage.setItem('email', email);
+        localStorage.setItem('message', message);
+
+        // Clear the form fields
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+
+        // Optionally, display a success message or redirect
+        alert('Your message has been saved!');
+    });
+
+    // Optional: Load the stored data into the form when the page reloads
+    window.onload = function () {
+        if (localStorage.getItem('name')) {
+            document.getElementById('name').value = localStorage.getItem('name');
+            document.getElementById('email').value = localStorage.getItem('email');
+            document.getElementById('message').value = localStorage.getItem('message');
+        }
+    };
+</script>
+    </script>
+</body>
+
+</html>

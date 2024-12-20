@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ForumIAS Clone</title>
+  <link rel="stylesheet" href="18_12_3.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="logo.png" alt="ForumIAS Logo" class="logo-image">
+        <span class="logo-text">ForumIAS</span>
+      </div>
+      <!-- Search Bar -->
+      <div class="search-container">
+        <input 
+          type="text" 
+          class="search-bar" 
+          placeholder="Search ForumIAS" 
+          onfocus="this.placeholder=''" 
+          onblur="this.placeholder='Search ForumIAS'"
+        />
+        <i class="fas fa-search search-icon"></i>
+      </div>
+      <!-- Notifications & Sign-in -->
+      <div class="header-icons">
+        <i class="fas fa-bell bell-icon"></i>
+        <button class="signin-btn">Sign In</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to ForumIAS Clone</h1>
+    <p>Your hub for discussions, blogs, and exam preparation tips.</p>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <section class="forum-list">
+      <h2>Latest Discussions</h2>
+      <div class="forum-item">
+        <h3>How to Prepare for UPSC?</h3>
+        <p>Join the discussion about the best strategies for UPSC preparation.</p>
+        <button>Read More</button>
+      </div>
+      <div class="forum-item">
+        <h3>Current Affairs Digest</h3>
+        <p>Daily updates on current events relevant for competitive exams.</p>
+        <button>Read More</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Go to Top Button -->
+  <button id="toTopBtn">Top</button>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 ForumIAS Clone. All rights reserved.</p>
+  </footer>
+
+  <script src="18_12_3.js"></script>
+</body>
+</html>
